@@ -9,11 +9,12 @@
   <meta property="og:title" content="ifans.click — Identidade Visual">
   <meta property="og:description" content="Conecte sua audiência. Monetize seu impacto. Plataforma completa de identidade visual — logos, cores, tipografia, tokens e design system.">
   <meta property="og:image" content="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.png">
+  <meta property="og:url" content="https://ifans.click">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/symbol-only.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     /* ==================== BRAND TOKENS (sempre disponíveis) ==================== */
     :root {
@@ -21,8 +22,9 @@
       --brand-secondary: #FD296C;
       --brand-accent:    #7B5EE8;
       --brand-dark:      #0D0B1E;
-      --font-heading: 'DM Sans', system-ui, sans-serif;
+      --font-heading: 'Syne', system-ui, sans-serif;
       --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-mono:    'DM Mono', 'Courier New', monospace;
       /* Layout & Motion */
       --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 24px;
       --shadow-glow: 0 0 40px rgba(68, 42, 192, 0.15);
@@ -197,7 +199,7 @@
     .section:last-of-type { border-bottom: none; }
     .section__header { margin-bottom: var(--space-2xl); }
     .section__label { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-primary); margin-bottom: var(--space-sm); }
-    .section__title { font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: -0.02em; margin-bottom: var(--space-sm); }
+    .section__title { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-sm); }
     .section__description { font-size: 1rem; color: var(--text-secondary); max-width: 640px; line-height: 1.7; }
 
     /* --- Buttons --- */
@@ -250,6 +252,7 @@
     .hero__logo { display: block; width: 900px; max-width: 92vw; height: auto; margin: 0 auto var(--space-xl); filter: drop-shadow(0 8px 32px rgba(68, 42, 192,0.28)); }
     .hero__watermark { position: absolute; bottom: var(--space-xl); right: var(--space-xl); width: 180px; max-width: 30vw; height: auto; opacity: 1; pointer-events: none; filter: invert(1) brightness(2) opacity(0.06); }
     .hero__title {
+      font-family: var(--font-heading);
       font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -0.03em;
       margin-bottom: var(--space-sm);
       background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
@@ -945,12 +948,12 @@
       </div>
       <div class="type-specimen">
         <div class="type-specimen__header">
-          <span class="type-specimen__name">Heading</span>
-          <span class="type-specimen__font">DM Sans
-            <button class="btn btn--ghost btn--sm tooltip" onclick="copyToClipboard('DM Sans', this)" aria-label="Copiar nome da fonte">Copiar<span class="tooltip__text">Copiado!</span></button>
+          <span class="type-specimen__name">Heading / Display</span>
+          <span class="type-specimen__font">Syne
+            <button class="btn btn--ghost btn--sm tooltip" onclick="copyToClipboard('Syne', this)" aria-label="Copiar nome da fonte">Copiar<span class="tooltip__text">Copiado!</span></button>
           </span>
         </div>
-        <div class="type-specimen__sample type-specimen__sample--heading">O crescimento tem metodo.</div>
+        <div class="type-specimen__sample type-specimen__sample--heading" style="font-family:'Syne',sans-serif;font-weight:800;">O crescimento tem metodo.</div>
         <div class="type-specimen__weights" id="headingWeights"></div>
       </div>
       <div class="type-specimen">
@@ -1031,8 +1034,8 @@
             <p class="doc-card__description">Guia completo com regras de uso do logo, paleta, tipografia e aplicacoes.</p>
             <div class="doc-card__actions">
               <a href="./brand-manual/index.html" class="btn btn--secondary btn--sm">Abrir</a>
-              <a href="" download class="btn btn--ghost btn--sm">Download</a>
-              <button class="btn btn--ghost btn--sm tooltip" onclick="copyToClipboard('', this)" aria-label="Copiar URL do Brand Manual">Copiar URL<span class="tooltip__text">Copiado!</span></button>
+              <a href="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/ifans-click-identidade-visual-20260621.zip" download="ifans-click-brand-manual.zip" class="btn btn--ghost btn--sm">Download</a>
+              <button class="btn btn--ghost btn--sm tooltip" onclick="copyToClipboard('https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/ifans-click-identidade-visual-20260621.zip', this)" aria-label="Copiar URL do Brand Manual">Copiar URL<span class="tooltip__text">Copiado!</span></button>
             </div>
           </div>
         </div>
@@ -1203,11 +1206,11 @@
           <div class="ds-brand-overview__colors" id="dsBrandColorRow"></div>
         </div>
         <div class="ds-brand-overview__block">
-          <span class="ds-brand-overview__label">Tipografia Principal</span>
-          <span class="ds-brand-overview__font" style="font-family:'DM Sans',sans-serif;">DM Sans</span>
+          <span class="ds-brand-overview__label">Tipografia Display</span>
+          <span class="ds-brand-overview__font" style="font-family:'Syne',sans-serif;font-weight:800;">Syne</span>
         </div>
         <div class="ds-brand-overview__block">
-          <span class="ds-brand-overview__label">Tipografia Secundária</span>
+          <span class="ds-brand-overview__label">Tipografia Body/UI</span>
           <span class="ds-brand-overview__font" style="font-family:'DM Sans',sans-serif;">DM Sans</span>
         </div>
         <div class="ds-brand-overview__block">
@@ -1340,7 +1343,48 @@
     /* === DATA (injected at build time) === */
     const PALETTE = [{"name":"Velvet","hex":"#442AC0","rgb":"68, 42, 192","role":"primary"},{"name":"Desire","hex":"#FD296C","rgb":"253, 41, 108","role":"secondary"},{"name":"Velvet Light","hex":"#7B5EE8","rgb":"123, 94, 232","role":"accent"},{"name":"Obsidiana","hex":"#0D0B1E","rgb":"13, 11, 30","role":"dark"},{"name":"Branco","hex":"#FFFFFF","rgb":"255, 255, 255","role":"light"}];
     const LOGOS = [{"name":"Logo Principal","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.png","variant":"primary","bg":"light"},{"name":"Logo Branco","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-negative.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-negative.png","variant":"white","bg":"dark"},{"name":"Logo Horizontal","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-horizontal.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-horizontal.png","variant":"horizontal","bg":"light"},{"name":"Logo Vertical","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-vertical.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-vertical.png","variant":"vertical","bg":"light"},{"name":"Logo Secundário","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-secondary.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-secondary.png","variant":"secondary","bg":"dark"},{"name":"Símbolo/Ícone","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/symbol-only.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/symbol-only.png","variant":"symbol","bg":"dark"},{"name":"Favicon","svg_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/favicon-32.svg","png_url":"https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/favicon-32.png","variant":"favicon","bg":"dark"}];
-    const SOCIAL_ITEMS = [];
+    const SOCIAL_ITEMS = [
+      {
+        name: "Avatar Instagram",
+        format: "2000 \u00d7 2000px",
+        desc: "Foto de perfil e \u00edcone de destaques",
+        url: "https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/social-kit.html#avatar-instagram",
+        preview_bg: "#442AC0",
+        icon: "\ud83d\udcf8"
+      },
+      {
+        name: "Post Feed Instagram",
+        format: "1080 \u00d7 1350px",
+        desc: "Post vertical 4:5 para feed",
+        url: "https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/social-kit.html#post-feed",
+        preview_bg: "#0D0B1E",
+        icon: "\ud83d\uddbc"
+      },
+      {
+        name: "Story / Reels",
+        format: "1080 \u00d7 1920px",
+        desc: "Stories e Reels \u2014 formato vertical completo",
+        url: "https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/social-kit.html#story",
+        preview_bg: "#442AC0",
+        icon: "\ud83d\udcf1"
+      },
+      {
+        name: "LinkedIn Cover",
+        format: "1584 \u00d7 396px",
+        desc: "Capa do perfil LinkedIn",
+        url: "https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/social-kit.html#linkedin-cover",
+        preview_bg: "#0D0B1E",
+        icon: "\ud83d\udcbc"
+      },
+      {
+        name: "OG Image / Link Preview",
+        format: "1200 \u00d7 630px",
+        desc: "Preview para WhatsApp, LinkedIn e Twitter",
+        url: "https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/social-kit.html#og-image",
+        preview_bg: "#0D0B1E",
+        icon: "\ud83d\udd17"
+      }
+    ];
     const TOKENS_CSS_URL = '';
     const TOKENS_JSON_URL = '';
 
@@ -1642,7 +1686,7 @@
     function renderTypographyWeights() {
       const hEl = document.getElementById('headingWeights');
       const bEl = document.getElementById('bodyWeights');
-      const hW = [{name:'Regular',w:400},{name:'Medium',w:500},{name:'Semi Bold',w:600},{name:'Bold',w:700},{name:'Extra Bold',w:800}];
+      const hW = [{name:'Bold',w:700},{name:'Extra Bold',w:800}];
       const bW = [{name:'Light',w:300},{name:'Regular',w:400},{name:'Medium',w:500},{name:'Semi Bold',w:600},{name:'Bold',w:700}];
       function renderW(el, weights, font) {
         if (!el) return;
@@ -1657,19 +1701,32 @@
 
     /* === RENDER: Social === */
     function renderSocial() {
-      const grid = document.getElementById('socialGrid');
+      var grid = document.getElementById('socialGrid');
       if (!grid) return;
-      grid.innerHTML = SOCIAL_ITEMS.filter(function(s){return s.url;}).map(function(item) {
-        const fn = item.name.toLowerCase().replace(/\s+/g,'-')+'.png';
-        const name = escapeHtml(item.name);
-        return '<div class="social-card animate-in">' +
-          '<div class="social-card__preview"><img src="'+escapeAttr(item.url)+'" alt="'+name+'" loading="lazy"></div>' +
-          '<div class="social-card__body"><h3 class="social-card__title">'+name+'</h3>' +
-          '<p class="social-card__dimensions">'+escapeHtml(item.dimensions)+'</p>' +
-          '<div class="social-card__actions">' +
-            '<button class="btn btn--secondary btn--sm" onclick="downloadFile(\''+escapeJs(item.url)+'\',\''+escapeJs(fn)+'\')" aria-label="Baixar '+name+'">Download</button>' +
-            '<button class="btn btn--ghost btn--sm tooltip" onclick="copyToClipboard(\''+escapeJs(item.url)+'\',this)" aria-label="Copiar URL">URL<span class="tooltip__text">Copiado!</span></button>' +
-          '</div></div></div>';
+      if (!SOCIAL_ITEMS || !SOCIAL_ITEMS.length) {
+        grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:var(--space-2xl);grid-column:1/-1;">Nenhum template social disponivel.</p>';
+        return;
+      }
+      grid.innerHTML = SOCIAL_ITEMS.map(function(item) {
+        var name = escapeHtml(item.name || '');
+        var format = escapeHtml(item.format || '');
+        var desc = escapeHtml(item.desc || '');
+        var icon = item.icon || '\ud83c\udfa8';
+        var url = escapeAttr(item.url || '#');
+        var bg = escapeAttr(item.preview_bg || '#442AC0');
+        return (
+          '<div class="social-card animate-in">' +
+            '<div class="social-card__preview" style="background:' + bg + ';display:flex;align-items:center;justify-content:center;height:120px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;">' +
+              '<span style="font-size:2.5rem;">' + icon + '</span>' +
+            '</div>' +
+            '<div class="social-card__body" style="padding:var(--space-lg);">' +
+              '<p class="social-card__name" style="font-weight:700;font-size:1rem;margin-bottom:4px;">' + name + '</p>' +
+              '<span class="social-card__format" style="font-size:0.75rem;color:var(--brand-primary);font-weight:600;font-family:monospace;">' + format + '</span>' +
+              '<p class="social-card__desc" style="font-size:0.85rem;color:var(--text-secondary);margin-top:8px;line-height:1.5;">' + desc + '</p>' +
+              '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" style="margin-top:var(--space-md);">Ver Template \u2192</a>' +
+            '</div>' +
+          '</div>'
+        );
       }).join('');
     }
 
@@ -1755,7 +1812,7 @@
       SOCIAL_ITEMS.forEach(function(s){if(s.url) rows.push({filename:s.name+'.png',category:'Social',type:'PNG',url:s.url});});
       if(TOKENS_CSS_URL) rows.push({filename:'tokens.css',category:'Tokens',type:'CSS',url:TOKENS_CSS_URL});
       if(TOKENS_JSON_URL) rows.push({filename:'tokens.json',category:'Tokens',type:'JSON',url:TOKENS_JSON_URL});
-      if('') rows.push({filename:'Brand Manual',category:'Docs',type:'HTML',url:''});
+      rows.push({filename:'Brand Manual',category:'Docs',type:'ZIP',url:'https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/ifans-click-identidade-visual-20260621.zip'});
       if('https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/brand-presentation.html') rows.push({filename:'Apresentacao',category:'Docs',type:'HTML',url:'https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/brand-presentation.html'});
       tbody.innerHTML = rows.map(function(row){
         const trCls = row.highlight ? ' class="dl-table__highlight"' : '';
