@@ -39,34 +39,12 @@
     /* Fundos neutros quase-pretos — marca aparece nos acentos, gradientes e hero */
     :root,
     [data-theme="dark"] {
-      --bg-base:       #0D0B1E;
-      --bg-surface:    #13112A;
-      --bg-card:       #1A1830;
-      --bg-card-hover: #1F1D38;
-      --bg-elevated:   #1C1A32;
-      --text-primary:   #f0f0f8;
-      --text-secondary: rgba(240,240,248,0.62);
-      --text-muted:     rgba(240,240,248,0.38);
-      --border-subtle:  rgba(240,240,248,0.07);
-      --border-medium:  rgba(240,240,248,0.13);
-      --border-accent:  var(--brand-primary);
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.6);
-      --shadow-lg: 0 8px 32px rgba(0,0,0,0.7);
-      --btn-primary-fg:  #ffffff;
-      --nav-bg:          rgba(13,13,16,0.92);
-      --nav-menu-bg:     rgba(13,13,16,0.97);
-      --logo-bg-dark:    rgba(255,255,255,0.06);
-      --logo-bg-light:   rgba(255,255,255,0.03);
-      --hero-gradient:   linear-gradient(135deg, #0d0d10 0%, color-mix(in srgb, #FD296C 40%, #0d0d10 60%) 50%, color-mix(in srgb, #442AC0 25%, #0d0d10 75%) 100%);
-      --scrollbar-thumb: rgba(240,240,248,0.12);
-      --scrollbar-hover: rgba(240,240,248,0.22);
-      /* Design System surface tokens */
-      --surface-secondary: var(--bg-surface);
-      --surface-raised: var(--bg-elevated);
-      --accent-primary: var(--brand-primary);
-      --border-default: var(--border-subtle);
-    }
+    --bg-base:       #0D0B1E;
+    --bg-surface:    #13112A;
+    --bg-card:       #1A1830;
+    --bg-card-hover: #1F1D38;
+    --bg-elevated:   #1C1A32;
+  }
 
     /* ==================== LIGHT MODE ==================== */
     /* Zero hardcode — tudo derivado das cores da marca via color-mix */
@@ -1112,7 +1090,7 @@
           <button class="btn btn--ghost btn--sm" onclick="openSigPreview()" aria-label="Abrir preview em nova aba">Abrir em nova aba</button>
         </div>
         <div style="background:var(--bg-surface);padding:24px 16px;border-radius:var(--radius-lg);border:1px solid var(--border-default);">
-          <div style="background:white;padding:24px;border-radius:8px;box-shadow:0 2px 16px rgba(0,0,0,0.3);max-width:600px;margin:0 auto;">
+          <div style="background:white;padding:24px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);max-width:600px;margin:0 auto;">
             <p style="font-size:0.75rem;color:#888;margin:0 0 16px;font-family:monospace;">— Corpo do email aqui —</p>
             <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
               <div id="sigPreviewContainer"></div>
