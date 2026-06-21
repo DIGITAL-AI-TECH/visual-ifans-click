@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     /* === CSS VARS === */
     :root {
@@ -17,8 +17,8 @@
       --brand-secondary: #FD296C;
       --brand-dark: #0D0B1E;
       --brand-light: #FFFFFF;
-      --brand-accent: #FFFFFF;
-      --font-heading: Syne, sans-serif;
+      --brand-accent: #7B5EE8;
+      --font-heading: DM Sans, sans-serif;
       --font-body: DM Sans, sans-serif;
       --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 
@@ -298,7 +298,7 @@
 
   <script>
     /* === DATA === */
-    const PALETTE = [{"name":"Velvet","hex":"#442AC0","rgb":"68, 42, 192","role":"primary"},{"name":"Desire","hex":"#FD296C","rgb":"253, 41, 108","role":"secondary"},{"name":"Branco","hex":"#FFFFFF","rgb":"255, 255, 255","role":"light"},{"name":"Obsidiana","hex":"#0D0B1E","rgb":"13, 11, 30","role":"dark"}];
+    const PALETTE = [{"name":"Velvet","hex":"#442AC0","rgb":"68, 42, 192","role":"primary"},{"name":"Desire","hex":"#FD296C","rgb":"253, 41, 108","role":"secondary"},{"name":"Velvet Light","hex":"#7B5EE8","rgb":"123, 94, 232","role":"accent"},{"name":"Obsidiana","hex":"#0D0B1E","rgb":"13, 11, 30","role":"dark"},{"name":"Branco","hex":"#FFFFFF","rgb":"255, 255, 255","role":"light"}];
 
     /* === ESCAPE === */
     function esc(str) {
@@ -358,7 +358,7 @@
         {name:'Secundária', token:'--brand-secondary', val:'#FD296C'},
         {name:'Profundidade', token:'--brand-dark', val:'#0D0B1E'},
         {name:'Claridade', token:'--brand-light', val:'#FFFFFF'},
-        {name:'Acento', token:'--brand-accent', val:'#FFFFFF'},
+        {name:'Acento', token:'--brand-accent', val:'#7B5EE8'},
       ].filter(function(t){ return t.val && t.val[0]==='#'; });
       var semGrid = document.getElementById('semanticGrid');
       if (semGrid && semTokens.length) {
@@ -377,7 +377,7 @@
     /* === TYPOGRAPHY === */
     function renderTypography() {
       var el = document.getElementById('typographyContent'); if (!el) return;
-      var pFont = 'Syne' || 'sans-serif';
+      var pFont = 'DM Sans' || 'sans-serif';
       var sFont = 'DM Sans' || 'sans-serif';
       var hColor = '#0D0B1E'; var bColor = 'var(--text-secondary)';
       var specs = [
