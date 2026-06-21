@@ -7,7 +7,7 @@
   <meta name="description" content="Plataforma de identidade visual de ifans.click. Acesse logos, paleta de cores, tipografia, social kit e design tokens.">
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:title" content="ifans.click — Identidade Visual">
-  <meta property="og:description" content="Plataforma de identidade visual completa. Logos, cores, tipografia, social kit e design tokens.">
+  <meta property="og:description" content="Conecte sua audiência. Monetize seu impacto. Plataforma completa de identidade visual — logos, cores, tipografia, tokens e design system.">
   <meta property="og:image" content="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.png">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/symbol-only.svg">
@@ -255,7 +255,8 @@
       background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .hero__subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--text-secondary); font-weight: 400; margin-bottom: var(--space-xl); }
+    .hero__subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: var(--text-secondary); font-weight: 400; margin-bottom: var(--space-sm); }
+    .hero__tagline { font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: var(--brand-accent); font-weight: 500; font-style: italic; margin-bottom: var(--space-xl); opacity: 0.9; }
     .hero__meta { display: flex; align-items: center; justify-content: center; gap: var(--space-md); margin-bottom: var(--space-2xl); flex-wrap: wrap; }
     .hero__badge {
       display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px;
@@ -619,9 +620,9 @@
       justify-content: center;
       padding: var(--space-lg);
     }
-    .usage-card__preview--light { background: #F8FAFC; }
-    .usage-card__preview--dark { background: #0F1F5C; }
-    .usage-card__preview--gradient { background: linear-gradient(135deg, #0F1F5C 0%, #2D52EF 100%); }
+    .usage-card__preview--light { background: color-mix(in srgb, #442AC0 5%, #FFFFFF 95%); }
+    .usage-card__preview--dark { background: #0D0B1E; }
+    .usage-card__preview--gradient { background: linear-gradient(135deg, #0D0B1E 0%, #442AC0 100%); }
     .usage-card__preview--neutral { background: var(--bg-surface); }
     .usage-card__body { padding: var(--space-lg); }
     .usage-card__title {
@@ -762,6 +763,7 @@
       <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.svg" alt="ifans.click logo" class="hero__logo" width="629" height="110" loading="eager">
       <h1 class="hero__title">ifans.click</h1>
       <p class="hero__subtitle">Identidade Visual</p>
+      <p class="hero__tagline">Conecte sua audiência. Monetize seu impacto.</p>
       <div class="hero__meta">
         <span class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span> v1</span>
         <span class="hero__badge">21 de junho de 2026</span>
@@ -819,7 +821,7 @@
 
         <div class="usage-card">
           <div class="usage-card__preview usage-card__preview--dark">
-            <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.svg" alt="Logo White" style="height:40px;width:auto;filter:brightness(0) invert(1);">
+            <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-negative.svg" alt="Logo Negativa" style="height:40px;width:auto;">
           </div>
           <div class="usage-card__body">
             <h4 class="usage-card__title">Negativa / Branca</h4>
@@ -835,7 +837,7 @@
 
         <div class="usage-card">
           <div class="usage-card__preview usage-card__preview--gradient">
-            <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.svg" alt="Logo Profundidade" style="height:40px;width:auto;filter:brightness(0) invert(1);">
+            <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-negative.svg" alt="Logo Profundidade" style="height:40px;width:auto;">
           </div>
           <div class="usage-card__body">
             <h4 class="usage-card__title">Profundidade</h4>
@@ -905,17 +907,17 @@
           <div class="contrast-checker__field">
             <label class="contrast-checker__label" for="ccBg">Fundo (background)</label>
             <div class="contrast-checker__color-row">
-              <input type="color" class="contrast-picker" id="ccBgPicker" value="#2D52EF" oninput="syncColor('bg',this.value)">
-              <input type="text" class="contrast-checker__hex" id="ccBg" value="#2D52EF" maxlength="7" oninput="syncColor('bg',this.value)" placeholder="#000000">
+              <input type="color" class="contrast-picker" id="ccBgPicker" value="#442AC0" oninput="syncColor('bg',this.value)">
+              <input type="text" class="contrast-checker__hex" id="ccBg" value="#442AC0" maxlength="7" oninput="syncColor('bg',this.value)" placeholder="#000000">
             </div>
           </div>
-          <div id="contrastResult" class="contrast-result" style="background:#2D52EF;color:#FFFFFF;">
+          <div id="contrastResult" class="contrast-result" style="background:#442AC0;color:#FFFFFF;">
             <span class="contrast-result__ratio" id="contrastRatio">—</span>
             <span class="contrast-result__label" id="contrastLabel">Calculando...</span>
           </div>
         </div>
         <div class="contrast-badges" id="contrastBadges"></div>
-        <div id="contrastPreview" class="contrast-preview" style="background:#2D52EF;color:#FFFFFF;">
+        <div id="contrastPreview" class="contrast-preview" style="background:#442AC0;color:#FFFFFF;">
           <strong>Texto Grande (18pt / 14pt bold)</strong>Texto normal — exemplo de leitura com este par de cores.
         </div>
       </div>
@@ -1077,7 +1079,7 @@
         </div>
         <div class="sig-form__field">
           <label class="sig-form__label" for="sigFieldEmail">Email</label>
-          <input class="sig-form__input" id="sigFieldEmail" type="email" placeholder="seu@ifans-click.digital-ai.tech" value="seu@ifans-click.digital-ai.tech" oninput="updateSignature()" />
+          <input class="sig-form__input" id="sigFieldEmail" type="email" placeholder="seu@ifans.click" value="seu@ifans.click" oninput="updateSignature()" />
           <span class="sig-form__hint">Edite os campos acima — o preview atualiza em tempo real ↓</span>
         </div>
       </div>
@@ -1850,16 +1852,16 @@
     var SIG_HTML_CODE = '';
 
     function buildSignatureHTML(logoUrl, brandColor, brandDark, sigName, sigRole, sigPhone, sigEmail) {
-      var c  = brandColor || '#2D52EF';
-      var d  = brandDark  || '#0F1F5C';
+      var c  = brandColor || '#442AC0';
+      var d  = brandDark  || '#0D0B1E';
       var a  = '#7B5EE8';
       var lc = '#FFFFFF' !== '{{' + 'BRAND_LIGHT}}' ? '#FFFFFF' : '#E8EEFF';
-      var site      = 'https://ifans-click.digital-ai.tech';
+      var site      = 'https://ifans.click';
       var siteShort = site.replace(/^https?:\/\//,'');
       var nome  = sigName  || 'SEU NOME COMPLETO';
       var cargo = sigRole  || 'Seu Cargo';
       var tel   = sigPhone || '+55 (64) 9XXXX-XXXX';
-      var mail  = sigEmail || 'seu@digital-ai.tech';
+      var mail  = sigEmail || 'seu@ifans.click';
       var lin       = 'https://linkedin.com/company/ifans-click';
       var insta     = 'https://instagram.com/ifans-click';
       // Compute intermediate gradient color (blend of c and a)
@@ -1867,8 +1869,8 @@
       function hex2(n){return ('0'+Math.round(n).toString(16)).slice(-2);}
       var mid = '#'+hex2((h2n(c,0)+h2n(a,0))/2)+hex2((h2n(c,2)+h2n(a,2))/2)+hex2((h2n(c,4)+h2n(a,4))/2);
       var lines = [
-        '<!-- Digital AI \u2014 Email Signature | table-based, 100% inline CSS -->',
-        '<!-- Personalizar: SEU NOME COMPLETO | Seu Cargo | +55 (64) 9XXXX-XXXX | seu@digital-ai.tech -->',
+        '<!-- ifans.click \u2014 Email Signature | table-based, 100% inline CSS -->',
+        '<!-- Personalizar: SEU NOME COMPLETO | Seu Cargo | +55 (64) 9XXXX-XXXX | seu@ifans.click -->',
         '<table cellpadding="0" cellspacing="0" border="0" style="width:500px;max-width:500px;font-family:Arial,Helvetica,sans-serif;border-collapse:collapse;background-color:#ffffff;"><tbody>',
 
         '<!-- Barra superior gradiente (3 colunas Outlook-safe) -->',
@@ -1888,8 +1890,8 @@
         '      <img src="' + logoUrl + '" alt="ifans.click" width="144" height="25" style="display:block;width:144px;height:25px;border:0;outline:0;line-height:0;" />',
         '    </a>',
         '    <table cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;border-collapse:collapse;"><tbody>',
-        '      <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;color:' + d + ';letter-spacing:0.08em;text-transform:uppercase;line-height:1.5;white-space:nowrap;">AI-as-a-Service</td></tr>',
-        '      <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#6B7CA4;letter-spacing:0.03em;padding-top:2px;white-space:nowrap;">Itumbiara &middot; GO &middot; Brasil</td></tr>',
+        '      <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;color:' + d + ';letter-spacing:0.08em;text-transform:uppercase;line-height:1.5;white-space:nowrap;">Creator Economy</td></tr>',
+        '      <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#6B7CA4;letter-spacing:0.03em;padding-top:2px;white-space:nowrap;">Conecte &middot; Monetize &middot; Cres&ccedil;a</td></tr>',
         '    </tbody></table>',
         '  </td>',
 
@@ -1940,7 +1942,7 @@
         '        <td><a href="' + site + '" target="_blank" style="text-decoration:none;"><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tbody><tr><td height="28" style="height:28px;padding:0 12px;background-color:' + lc + ';border-radius:6px;vertical-align:middle;"><span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;color:' + d + ';letter-spacing:0.02em;white-space:nowrap;">' + siteShort + '</span></td></tr></tbody></table></a></td>',
         '      </tr></tbody></table>',
         '    </td>',
-        '    <td valign="middle" align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#9AABFF;font-style:italic;letter-spacing:0.02em;padding-left:12px;">Intelig&ecirc;ncia que transforma opera&ccedil;&atilde;o em resultado.</td>',
+        '    <td valign="middle" align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#7B5EE8;font-style:italic;letter-spacing:0.02em;padding-left:12px;">Conecte sua audi&ecirc;ncia. Monetize seu impacto.</td>',
         '  </tr></tbody></table>',
         '</td></tr>',
 
@@ -1957,7 +1959,7 @@
       var name  = (document.getElementById('sigFieldName')  || {value:''}).value || 'SEU NOME COMPLETO';
       var role  = (document.getElementById('sigFieldRole')  || {value:''}).value || 'Seu Cargo';
       var phone = (document.getElementById('sigFieldPhone') || {value:''}).value || '+55 (64) 9XXXX-XXXX';
-      var email = (document.getElementById('sigFieldEmail') || {value:''}).value || 'seu@digital-ai.tech';
+      var email = (document.getElementById('sigFieldEmail') || {value:''}).value || 'seu@ifans.click';
       SIG_HTML_CODE = buildSignatureHTML(logoUrl, brandColor, brandDark, name, role, phone, email);
       var preview = document.getElementById('sigPreviewContainer');
       if (preview) preview.innerHTML = SIG_HTML_CODE;
