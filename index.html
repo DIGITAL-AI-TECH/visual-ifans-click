@@ -44,6 +44,10 @@
     --bg-card:       #1A1830;
     --bg-card-hover: #1F1D38;
     --bg-elevated:   #1C1A32;
+    --hero-gradient: linear-gradient(135deg,
+      #1A1040 0%,
+      color-mix(in srgb, #442AC0 40%, #0D0B1E 60%) 50%,
+      #0D0B1E 100%);
   }
 
     /* ==================== LIGHT MODE ==================== */
@@ -80,6 +84,7 @@
         #7B5EE8 0%,
         color-mix(in srgb, #7B5EE8 30%, #FFFFFF 70%) 40%,
         color-mix(in srgb, #442AC0 6%, #FFFFFF 94%) 100%);
+      --hero-logo-src: url("https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.svg");
       /* Scrollbar */
       --scrollbar-thumb: rgba(13, 11, 30, 0.15);
       --scrollbar-hover: rgba(13, 11, 30, 0.28);
@@ -724,7 +729,7 @@
   <nav class="nav" role="navigation" aria-label="Navegacao principal">
     <div class="nav__inner">
       <a href="#hero" class="nav__brand" aria-label="ifans.click — Voltar ao topo">
-        <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/symbol-only.svg" alt="" width="28" height="28" loading="eager">
+        <img src="https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/symbol-only.svg" alt="" width="28" height="28" loading="eager" class="nav__logo-img">
         <span class="nav__brand-name">ifans.click</span>
       </a>
       <button class="nav__mobile-toggle" aria-label="Abrir menu de navegacao" aria-expanded="false" onclick="toggleMobileNav()">
@@ -1816,12 +1821,19 @@
     /* === THEME TOGGLE === */
     const THEME_KEY = 'idv-platform-theme';
 
+    const LOGO_PRIMARY = 'https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-primary.svg';
+    const LOGO_NEGATIVE = 'https://s3.amazonaws.com/cdn.digital-ai.tech/uploads/media-cortex/identity/ifans-click/logos/logo-negative.svg';
+
     function applyTheme(theme) {
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem(THEME_KEY, theme);
+      const isDark = theme === 'dark';
+      // Troca logo do hero e nav conforme o tema
+      document.querySelectorAll('.hero__logo, .hero__watermark').forEach(function(el) {
+        el.src = isDark ? LOGO_NEGATIVE : LOGO_PRIMARY;
+      });
       const themeToggle = document.getElementById('themeToggle');
       if (!themeToggle) return;
-      const isDark = theme === 'dark';
       themeToggle.querySelector('.theme-toggle__icon').textContent = isDark ? '☀️' : '🌙';
       themeToggle.querySelector('.theme-toggle__label').textContent = isDark ? 'Light Mode' : 'Dark Mode';
     }
@@ -1999,10 +2011,14 @@
       // Inicializar theme toggle
       const themeToggle = document.getElementById('themeToggle');
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const isDarkInit = currentTheme === 'dark';
+      // Aplica logo correta ao carregar
+      document.querySelectorAll('.hero__logo, .hero__watermark').forEach(function(el) {
+        el.src = isDarkInit ? LOGO_NEGATIVE : LOGO_PRIMARY;
+      });
       if (themeToggle) {
-        const isDark = currentTheme === 'dark';
-        themeToggle.querySelector('.theme-toggle__icon').textContent = isDark ? '☀️' : '🌙';
-        themeToggle.querySelector('.theme-toggle__label').textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        themeToggle.querySelector('.theme-toggle__icon').textContent = isDarkInit ? '☀️' : '🌙';
+        themeToggle.querySelector('.theme-toggle__label').textContent = isDarkInit ? 'Light Mode' : 'Dark Mode';
         themeToggle.addEventListener('click', function() {
           const current = document.documentElement.getAttribute('data-theme');
           applyTheme(current === 'dark' ? 'light' : 'dark');
