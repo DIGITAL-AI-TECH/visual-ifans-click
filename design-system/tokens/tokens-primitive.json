@@ -1,0 +1,277 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "brand": "ifans.click",
+    "version": "1.0.0",
+    "generated": "2026-06-21",
+    "spec": "W3C Design Token Community Group (DTCG) — Draft 2024"
+  },
+
+  "color": {
+    "$description": "Paleta de cores da marca ifans.click",
+    "brand": {
+      "primary": {
+        "$value": "#442AC0",
+        "$type": "color",
+        "$description": "Velvet — cor primária da marca. Botões, CTAs, links ativos."
+      },
+      "secondary": {
+        "$value": "#FD296C",
+        "$type": "color",
+        "$description": "Desire — cor secundária. Badges, destaques, hover states."
+      },
+      "accent": {
+        "$value": "#7B5EE8",
+        "$type": "color",
+        "$description": "Velvet Light — acento suave para gradientes e ícones."
+      },
+      "dark": {
+        "$value": "#0D0B1E",
+        "$type": "color",
+        "$description": "Obsidiana — fundo principal da interface dark."
+      },
+      "white": {
+        "$value": "#FFFFFF",
+        "$type": "color",
+        "$description": "Branco puro — texto em fundos escuros, logo invertido."
+      }
+    },
+    "surface": {
+      "$description": "Superfícies da interface (dark mode padrão)",
+      "base": {
+        "$value": "#0D0B1E",
+        "$type": "color",
+        "$description": "Fundo base da página"
+      },
+      "surface": {
+        "$value": "#13112A",
+        "$type": "color",
+        "$description": "Superfície acima do fundo — painéis, sidebars"
+      },
+      "card": {
+        "$value": "#1A1830",
+        "$type": "color",
+        "$description": "Card padrão"
+      },
+      "card-hover": {
+        "$value": "#1F1D38",
+        "$type": "color",
+        "$description": "Card em estado hover"
+      },
+      "elevated": {
+        "$value": "#1C1A32",
+        "$type": "color",
+        "$description": "Elevado — modais, popovers, tooltips"
+      }
+    },
+    "text": {
+      "$description": "Cores de texto sobre fundos escuros",
+      "primary": {
+        "$value": "rgba(255, 255, 255, 0.95)",
+        "$type": "color",
+        "$description": "Texto principal — headings, body"
+      },
+      "secondary": {
+        "$value": "rgba(255, 255, 255, 0.65)",
+        "$type": "color",
+        "$description": "Texto secundário — subtítulos, labels"
+      },
+      "muted": {
+        "$value": "rgba(255, 255, 255, 0.40)",
+        "$type": "color",
+        "$description": "Texto suave — placeholders, hints"
+      },
+      "disabled": {
+        "$value": "rgba(255, 255, 255, 0.25)",
+        "$type": "color",
+        "$description": "Texto desabilitado"
+      }
+    },
+    "border": {
+      "$description": "Cores de borda",
+      "subtle": {
+        "$value": "rgba(255, 255, 255, 0.06)",
+        "$type": "color",
+        "$description": "Borda muito sutil — separadores"
+      },
+      "default": {
+        "$value": "rgba(255, 255, 255, 0.10)",
+        "$type": "color",
+        "$description": "Borda padrão — cards, inputs"
+      },
+      "strong": {
+        "$value": "rgba(255, 255, 255, 0.18)",
+        "$type": "color",
+        "$description": "Borda forte — elementos focados"
+      },
+      "brand": {
+        "$value": "rgba(68, 42, 192, 0.40)",
+        "$type": "color",
+        "$description": "Borda com cor brand — elementos selecionados"
+      }
+    }
+  },
+
+  "typography": {
+    "$description": "Sistema tipográfico de ifans.click",
+    "font-family": {
+      "heading": {
+        "$value": "'Syne', system-ui, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Headings, títulos, display. Pesos 700–800."
+      },
+      "body": {
+        "$value": "'DM Sans', system-ui, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Corpo de texto, UI, labels. Pesos 300–700."
+      },
+      "mono": {
+        "$value": "'DM Mono', 'Courier New', monospace",
+        "$type": "fontFamily",
+        "$description": "Código, tokens, dados técnicos."
+      }
+    },
+    "font-size": {
+      "xs":   { "$value": "0.75rem",  "$type": "dimension", "$description": "12px" },
+      "sm":   { "$value": "0.875rem", "$type": "dimension", "$description": "14px" },
+      "base": { "$value": "1rem",     "$type": "dimension", "$description": "16px" },
+      "lg":   { "$value": "1.125rem", "$type": "dimension", "$description": "18px" },
+      "xl":   { "$value": "1.25rem",  "$type": "dimension", "$description": "20px" },
+      "2xl":  { "$value": "1.5rem",   "$type": "dimension", "$description": "24px" },
+      "3xl":  { "$value": "1.875rem", "$type": "dimension", "$description": "30px" },
+      "4xl":  { "$value": "2.25rem",  "$type": "dimension", "$description": "36px" },
+      "5xl":  { "$value": "3rem",     "$type": "dimension", "$description": "48px" },
+      "6xl":  { "$value": "3.75rem",  "$type": "dimension", "$description": "60px" },
+      "7xl":  { "$value": "4.5rem",   "$type": "dimension", "$description": "72px" }
+    },
+    "font-weight": {
+      "light":     { "$value": 300, "$type": "fontWeight" },
+      "regular":   { "$value": 400, "$type": "fontWeight" },
+      "medium":    { "$value": 500, "$type": "fontWeight" },
+      "semibold":  { "$value": 600, "$type": "fontWeight" },
+      "bold":      { "$value": 700, "$type": "fontWeight" },
+      "extrabold": { "$value": 800, "$type": "fontWeight" }
+    },
+    "line-height": {
+      "tight":   { "$value": 1.2,  "$type": "number", "$description": "Headings grandes" },
+      "snug":    { "$value": 1.35, "$type": "number", "$description": "Headings médios" },
+      "normal":  { "$value": 1.5,  "$type": "number", "$description": "Corpo padrão" },
+      "relaxed": { "$value": 1.65, "$type": "number", "$description": "Leitura longa" },
+      "loose":   { "$value": 1.8,  "$type": "number", "$description": "Espaçamento amplo" }
+    }
+  },
+
+  "spacing": {
+    "$description": "Escala de espaçamento baseada em grid de 4pt",
+    "0":    { "$value": "0",       "$type": "dimension", "$description": "0px" },
+    "px":   { "$value": "1px",     "$type": "dimension", "$description": "1px" },
+    "0-5":  { "$value": "0.125rem","$type": "dimension", "$description": "2px" },
+    "xs":   { "$value": "0.25rem", "$type": "dimension", "$description": "4px" },
+    "sm":   { "$value": "0.5rem",  "$type": "dimension", "$description": "8px" },
+    "md":   { "$value": "1rem",    "$type": "dimension", "$description": "16px" },
+    "lg":   { "$value": "1.5rem",  "$type": "dimension", "$description": "24px" },
+    "xl":   { "$value": "2rem",    "$type": "dimension", "$description": "32px" },
+    "2xl":  { "$value": "3rem",    "$type": "dimension", "$description": "48px" },
+    "3xl":  { "$value": "4rem",    "$type": "dimension", "$description": "64px" },
+    "4xl":  { "$value": "6rem",    "$type": "dimension", "$description": "96px" },
+    "5xl":  { "$value": "8rem",    "$type": "dimension", "$description": "128px" }
+  },
+
+  "border-radius": {
+    "$description": "Escala de bordas arredondadas",
+    "none":  { "$value": "0",      "$type": "dimension" },
+    "xs":    { "$value": "4px",    "$type": "dimension" },
+    "sm":    { "$value": "8px",    "$type": "dimension" },
+    "md":    { "$value": "12px",   "$type": "dimension" },
+    "lg":    { "$value": "16px",   "$type": "dimension" },
+    "xl":    { "$value": "24px",   "$type": "dimension" },
+    "2xl":   { "$value": "32px",   "$type": "dimension" },
+    "full":  { "$value": "9999px", "$type": "dimension", "$description": "Pill / circular" }
+  },
+
+  "shadow": {
+    "$description": "Sombras e efeitos de glow da marca",
+    "glow": {
+      "$value": "0 0 40px rgba(68, 42, 192, 0.15)",
+      "$type": "shadow",
+      "$description": "Glow brand suave — cards e elementos passivos"
+    },
+    "glow-lg": {
+      "$value": "0 0 60px rgba(68, 42, 192, 0.25)",
+      "$type": "shadow",
+      "$description": "Glow brand intenso — hover states e CTAs"
+    },
+    "glow-secondary": {
+      "$value": "0 0 30px rgba(253, 41, 108, 0.20)",
+      "$type": "shadow",
+      "$description": "Glow Desire — badges e destaques secundários"
+    },
+    "sm": {
+      "$value": "0 1px 3px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20)",
+      "$type": "shadow"
+    },
+    "md": {
+      "$value": "0 4px 12px rgba(0, 0, 0, 0.40)",
+      "$type": "shadow"
+    },
+    "lg": {
+      "$value": "0 8px 32px rgba(0, 0, 0, 0.50)",
+      "$type": "shadow"
+    },
+    "xl": {
+      "$value": "0 16px 48px rgba(0, 0, 0, 0.60)",
+      "$type": "shadow"
+    }
+  },
+
+  "motion": {
+    "$description": "Sistema de motion design — durações e curvas de easing",
+    "duration": {
+      "instant": { "$value": "0ms",   "$type": "duration" },
+      "fast":    { "$value": "150ms", "$type": "duration", "$description": "Micro-interações (hover, focus)" },
+      "base":    { "$value": "250ms", "$type": "duration", "$description": "Transições padrão de componentes" },
+      "slow":    { "$value": "400ms", "$type": "duration", "$description": "Entradas e saídas de elementos" },
+      "slower":  { "$value": "600ms", "$type": "duration", "$description": "Animações de página" },
+      "slowest": { "$value": "800ms", "$type": "duration", "$description": "Animações de herói e splash" }
+    },
+    "easing": {
+      "standard": {
+        "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "cubicBezier",
+        "$description": "Standard — movimentos que começam e terminam na tela (MD3)"
+      },
+      "enter": {
+        "$value": "cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "cubicBezier",
+        "$description": "Enter — elementos entrando na tela, desacelerando"
+      },
+      "exit": {
+        "$value": "cubic-bezier(0.4, 0, 1, 1)",
+        "$type": "cubicBezier",
+        "$description": "Exit — elementos saindo da tela, acelerando"
+      },
+      "emphasized": {
+        "$value": "cubic-bezier(0.2, 0, 0, 1)",
+        "$type": "cubicBezier",
+        "$description": "Emphasized — movimentos com destaque (spring feel, MD3)"
+      }
+    },
+    "transition": {
+      "fast": {
+        "$value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Preset rápido — uso direto em CSS transition"
+      },
+      "base": {
+        "$value": "250ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Preset padrão — uso direto em CSS transition"
+      },
+      "slow": {
+        "$value": "400ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Preset lento — uso direto em CSS transition"
+      }
+    }
+  }
+}

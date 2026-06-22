@@ -1,0 +1,358 @@
+/**
+ * ifans.click — Motion System
+ * Tokens de motion, easing curves e classes utilitárias de animação
+ *
+ * Versão: 1.0.0 | 2026-06-21
+ *
+ * Baseado em Material Design 3 (MD3) Motion Guidelines com
+ * adaptações para a linguagem visual de ifans.click.
+ *
+ * Seções:
+ *   1. Tokens de duração e easing (custom properties)
+ *   2. Classes utilitárias de transição
+ *   3. Animações de entrada: fade-in, slide-up, scale-in
+ *   4. Animações de saída: fade-out, slide-down, scale-out
+ *   5. Animações de atenção: pulse, shimmer, float
+ *   6. Reduced motion overrides (acessibilidade)
+ */
+
+
+/* ============================================================
+ * 1. MOTION TOKENS — Custom Properties
+ * ============================================================ */
+
+:root {
+
+  /* --- Durações --- */
+  --duration-instant:  0ms;
+  --duration-fast:     150ms;   /* micro-interações: hover, focus ring */
+  --duration-base:     250ms;   /* transições padrão de componentes */
+  --duration-slow:     400ms;   /* entradas e saídas de elementos */
+  --duration-slower:   600ms;   /* animações de página */
+  --duration-slowest:  800ms;   /* herói e splash screens */
+
+  /* --- Easing Curves (MD3) --- */
+
+  /** Standard: movimentos que começam e terminam na tela */
+  --ease-standard:    cubic-bezier(0.4, 0, 0.2, 1);
+
+  /** Enter: elementos entrando na tela — decelera ao chegar */
+  --ease-enter:       cubic-bezier(0, 0, 0.2, 1);
+
+  /** Exit: elementos saindo da tela — acelera ao sair */
+  --ease-exit:        cubic-bezier(0.4, 0, 1, 1);
+
+  /** Emphasized: movimentos expressivos com spring feel */
+  --ease-emphasized:  cubic-bezier(0.2, 0, 0, 1);
+
+  /* --- Transition Presets --- */
+  --transition-fast:  var(--duration-fast)  var(--ease-standard);
+  --transition-base:  var(--duration-base)  var(--ease-standard);
+  --transition-slow:  var(--duration-slow)  var(--ease-standard);
+
+}
+
+
+/* ============================================================
+ * 2. CLASSES UTILITÁRIAS DE TRANSIÇÃO
+ * ============================================================ */
+
+/** Aplica transição padrão em todas as propriedades animáveis */
+.transition-all-fast { transition: all var(--transition-fast); }
+.transition-all-base { transition: all var(--transition-base); }
+.transition-all-slow { transition: all var(--transition-slow); }
+
+/** Transição apenas em opacity e transform (recomendado para performance) */
+.transition-ui-fast  { transition: opacity var(--transition-fast), transform var(--transition-fast); }
+.transition-ui-base  { transition: opacity var(--transition-base), transform var(--transition-base); }
+.transition-ui-slow  { transition: opacity var(--transition-slow), transform var(--transition-slow); }
+
+/** Transição de cores (hover em links e botões) */
+.transition-colors   { transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast); }
+
+
+/* ============================================================
+ * 3. KEYFRAMES — ANIMAÇÕES DE ENTRADA
+ * ============================================================ */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-in-center {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ============================================================
+ * 4. KEYFRAMES — ANIMAÇÕES DE SAÍDA
+ * ============================================================ */
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes slide-out-down {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+
+/* ============================================================
+ * 5. KEYFRAMES — ANIMAÇÕES DE ATENÇÃO E LOOP
+ * ============================================================ */
+
+/** Pulso suave — para badges e indicadores ativos */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+/** Shimmer — skeleton loading / carregamento */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/** Float — elementos flutuantes (herói, ilustrações) */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/** Glow pulse — brilho pulsante em elementos brand */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(68, 42, 192, 0.10); }
+  50%       { box-shadow: 0 0 50px rgba(68, 42, 192, 0.30); }
+}
+
+/** Spin — ícones de loading */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/** Bounce in — micro-interação de confirmação */
+@keyframes bounce-in {
+  0%   { transform: scale(0.9);  opacity: 0; }
+  60%  { transform: scale(1.05); opacity: 1; }
+  80%  { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+
+/* ============================================================
+ * 6. CLASSES UTILITÁRIAS DE ANIMAÇÃO
+ * ============================================================ */
+
+/* Entradas */
+.motion-fade-in {
+  animation: fade-in var(--duration-slow) var(--ease-enter) both;
+}
+
+.motion-slide-up {
+  animation: slide-up var(--duration-slow) var(--ease-enter) both;
+}
+
+.motion-slide-down {
+  animation: slide-down var(--duration-slow) var(--ease-enter) both;
+}
+
+.motion-slide-in-left {
+  animation: slide-in-left var(--duration-slow) var(--ease-enter) both;
+}
+
+.motion-slide-in-right {
+  animation: slide-in-right var(--duration-slow) var(--ease-enter) both;
+}
+
+.motion-scale-in {
+  animation: scale-in var(--duration-slow) var(--ease-emphasized) both;
+}
+
+.motion-scale-in-center {
+  animation: scale-in-center var(--duration-slower) var(--ease-emphasized) both;
+}
+
+.motion-bounce-in {
+  animation: bounce-in var(--duration-slower) var(--ease-emphasized) both;
+}
+
+/* Saídas */
+.motion-fade-out {
+  animation: fade-out var(--duration-base) var(--ease-exit) both;
+}
+
+.motion-slide-out-down {
+  animation: slide-out-down var(--duration-base) var(--ease-exit) both;
+}
+
+.motion-scale-out {
+  animation: scale-out var(--duration-base) var(--ease-exit) both;
+}
+
+/* Loop / Atenção */
+.motion-pulse {
+  animation: pulse 2s var(--ease-standard) infinite;
+}
+
+.motion-float {
+  animation: float 3s var(--ease-standard) infinite;
+}
+
+.motion-glow-pulse {
+  animation: glow-pulse 2.5s var(--ease-standard) infinite;
+}
+
+.motion-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Skeleton / Shimmer */
+.motion-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s var(--ease-standard) infinite;
+}
+
+
+/* ============================================================
+ * 7. DELAY UTILITIES (stagger em listas e grids)
+ * ============================================================ */
+
+.delay-75   { animation-delay: 75ms; }
+.delay-100  { animation-delay: 100ms; }
+.delay-150  { animation-delay: 150ms; }
+.delay-200  { animation-delay: 200ms; }
+.delay-300  { animation-delay: 300ms; }
+.delay-400  { animation-delay: 400ms; }
+.delay-500  { animation-delay: 500ms; }
+.delay-700  { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+
+/* ============================================================
+ * 8. REDUCED MOTION — Acessibilidade (WCAG 2.1 — 2.3.3)
+ *
+ * Usuários que ativaram "Reduzir movimento" no OS recebem
+ * apenas fade (opacity), sem transforms ou animações de loop.
+ * ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Mantém apenas fade com duração mínima visível */
+  .motion-fade-in,
+  .motion-slide-up,
+  .motion-slide-down,
+  .motion-slide-in-left,
+  .motion-slide-in-right,
+  .motion-scale-in,
+  .motion-scale-in-center,
+  .motion-bounce-in {
+    animation: fade-in 200ms ease both;
+  }
+
+  /* Remove animações de loop completamente */
+  .motion-pulse,
+  .motion-float,
+  .motion-glow-pulse,
+  .motion-spin,
+  .motion-shimmer {
+    animation: none;
+  }
+}

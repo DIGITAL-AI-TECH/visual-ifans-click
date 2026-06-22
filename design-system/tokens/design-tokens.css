@@ -1,0 +1,251 @@
+/**
+ * ifans.click — Design Tokens
+ * W3C Design Token Community Group (DTCG) — CSS Custom Properties
+ *
+ * Gerado automaticamente a partir da identidade visual de ifans.click.
+ * Versão: 1.0.0 | 2026-06-21
+ *
+ * Categorias:
+ *   1. Color — Brand, Neutral, Semantic
+ *   2. Typography — Fonts, Size Scale, Weight, Line Height
+ *   3. Spacing — Scale utilitária 4pt grid
+ *   4. Border Radius — Scale de bordas arredondadas
+ *   5. Shadow & Glow — Elevação e efeitos de luz
+ *   6. Motion — Transições e easing curves
+ *   7. Layout — Container, grid, breakpoints
+ */
+
+:root {
+
+  /* ============================================================
+   * 1. COLOR — BRAND PALETTE
+   * ============================================================ */
+
+  /** Velvet — cor primária da marca. Botões, CTAs, links ativos. */
+  --color-brand-primary:    #442AC0;
+
+  /** Desire — cor secundária. Badges, destaques, hover states. */
+  --color-brand-secondary:  #FD296C;
+
+  /** Velvet Light — acento suave para gradientes e ícones. */
+  --color-brand-accent:     #7B5EE8;
+
+  /** Obsidiana — fundo principal da interface dark. */
+  --color-brand-dark:       #0D0B1E;
+
+  /** Branco puro — texto em fundos escuros, ícones, logo invertido. */
+  --color-brand-white:      #FFFFFF;
+
+  /* Brand — aliases semânticos */
+  --color-primary:          var(--color-brand-primary);
+  --color-secondary:        var(--color-brand-secondary);
+  --color-accent:           var(--color-brand-accent);
+
+
+  /* ============================================================
+   * 1b. COLOR — SURFACE (dark mode, padrão ifans.click)
+   * ============================================================ */
+
+  /** Fundo base da página */
+  --color-bg-base:          #0D0B1E;
+
+  /** Superfície acima do fundo (cards, painéis) */
+  --color-bg-surface:       #13112A;
+
+  /** Card padrão */
+  --color-bg-card:          #1A1830;
+
+  /** Card em hover */
+  --color-bg-card-hover:    #1F1D38;
+
+  /** Elevado (modais, popovers) */
+  --color-bg-elevated:      #1C1A32;
+
+
+  /* ============================================================
+   * 1c. COLOR — TEXT
+   * ============================================================ */
+
+  --color-text-primary:     rgba(255, 255, 255, 0.95);
+  --color-text-secondary:   rgba(255, 255, 255, 0.65);
+  --color-text-muted:       rgba(255, 255, 255, 0.40);
+  --color-text-disabled:    rgba(255, 255, 255, 0.25);
+
+
+  /* ============================================================
+   * 1d. COLOR — BORDER
+   * ============================================================ */
+
+  --color-border-subtle:    rgba(255, 255, 255, 0.06);
+  --color-border-default:   rgba(255, 255, 255, 0.10);
+  --color-border-strong:    rgba(255, 255, 255, 0.18);
+  --color-border-brand:     rgba(68, 42, 192, 0.40);
+
+
+  /* ============================================================
+   * 2. TYPOGRAPHY — FONT FAMILIES
+   * ============================================================ */
+
+  /** Syne — headings, títulos, display. Peso 700–800. */
+  --font-heading:           'Syne', system-ui, sans-serif;
+
+  /** DM Sans — corpo de texto, UI, labels. Peso 300–700. */
+  --font-body:              'DM Sans', system-ui, sans-serif;
+
+  /** DM Mono — código, tokens, dados técnicos. */
+  --font-mono:              'DM Mono', 'Courier New', monospace;
+
+
+  /* ============================================================
+   * 2b. TYPOGRAPHY — SIZE SCALE (clamp responsivo)
+   * ============================================================ */
+
+  --text-xs:    0.75rem;   /* 12px */
+  --text-sm:    0.875rem;  /* 14px */
+  --text-base:  1rem;      /* 16px */
+  --text-lg:    1.125rem;  /* 18px */
+  --text-xl:    1.25rem;   /* 20px */
+  --text-2xl:   1.5rem;    /* 24px */
+  --text-3xl:   1.875rem;  /* 30px */
+  --text-4xl:   2.25rem;   /* 36px */
+  --text-5xl:   3rem;      /* 48px */
+  --text-6xl:   3.75rem;   /* 60px */
+  --text-7xl:   4.5rem;    /* 72px */
+
+
+  /* ============================================================
+   * 2c. TYPOGRAPHY — FONT WEIGHT
+   * ============================================================ */
+
+  --weight-light:     300;
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+
+  /* ============================================================
+   * 2d. TYPOGRAPHY — LINE HEIGHT
+   * ============================================================ */
+
+  --leading-tight:    1.2;
+  --leading-snug:     1.35;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.65;
+  --leading-loose:    1.8;
+
+
+  /* ============================================================
+   * 3. SPACING — 4pt GRID
+   * ============================================================ */
+
+  --space-0:    0;
+  --space-px:   1px;
+  --space-0-5:  0.125rem;  /*  2px */
+  --space-xs:   0.25rem;   /*  4px */
+  --space-sm:   0.5rem;    /*  8px */
+  --space-md:   1rem;      /* 16px */
+  --space-lg:   1.5rem;    /* 24px */
+  --space-xl:   2rem;      /* 32px */
+  --space-2xl:  3rem;      /* 48px */
+  --space-3xl:  4rem;      /* 64px */
+  --space-4xl:  6rem;      /* 96px */
+  --space-5xl:  8rem;      /* 128px */
+
+
+  /* ============================================================
+   * 4. BORDER RADIUS
+   * ============================================================ */
+
+  --radius-none:  0;
+  --radius-xs:    4px;
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-xl:    24px;
+  --radius-2xl:   32px;
+  --radius-full:  9999px;
+
+
+  /* ============================================================
+   * 5. SHADOW & GLOW
+   * ============================================================ */
+
+  /** Glow brand — sombra difusa roxa usada em CTAs e cards em foco */
+  --shadow-glow:     0 0 40px rgba(68, 42, 192, 0.15);
+
+  /** Glow brand intenso — hover states */
+  --shadow-glow-lg:  0 0 60px rgba(68, 42, 192, 0.25);
+
+  /** Glow secundário — badges e destaques em Desire */
+  --shadow-glow-secondary: 0 0 30px rgba(253, 41, 108, 0.20);
+
+  /** Elevação padrão */
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.20);
+  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.40);
+  --shadow-lg:    0 8px 32px rgba(0, 0, 0, 0.50);
+  --shadow-xl:    0 16px 48px rgba(0, 0, 0, 0.60);
+
+
+  /* ============================================================
+   * 6. MOTION — DURATION
+   * ============================================================ */
+
+  --duration-instant:   0ms;
+  --duration-fast:      150ms;
+  --duration-base:      250ms;
+  --duration-slow:      400ms;
+  --duration-slower:    600ms;
+  --duration-slowest:   800ms;
+
+
+  /* ============================================================
+   * 6b. MOTION — EASING CURVES (Material Design 3 / MD3)
+   * ============================================================ */
+
+  /** Standard — movimentos que começam e terminam na tela */
+  --ease-standard:  cubic-bezier(0.4, 0, 0.2, 1);
+
+  /** Enter — elementos entrando na tela (desacelerando) */
+  --ease-enter:     cubic-bezier(0, 0, 0.2, 1);
+
+  /** Exit — elementos saindo da tela (acelerando) */
+  --ease-exit:      cubic-bezier(0.4, 0, 1, 1);
+
+  /** Emphasized — movimentos com destaque (spring feel) */
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+
+
+  /* ============================================================
+   * 6c. MOTION — TRANSITION PRESETS
+   * ============================================================ */
+
+  --transition-fast:  150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:  400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  /* ============================================================
+   * 7. LAYOUT
+   * ============================================================ */
+
+  --container-max:    1280px;
+  --container-sm:     640px;
+  --container-md:     768px;
+  --container-lg:     1024px;
+  --container-xl:     1280px;
+
+  --nav-height:       64px;
+
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+
+}
